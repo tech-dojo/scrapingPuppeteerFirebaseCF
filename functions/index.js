@@ -1,8 +1,22 @@
-const functions = require('firebase-functions')
-
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  response.send('Hello from Firebase!')
+const functions = require('firebase-functions')
+const cors = require('cors')
+const express = require('express')
+// const scraper = require('./scraper')
+
+const app = express()
+
+app.use(cors({origin: true}))
+
+app.get('/scrape', (req, res) => {
+  // scraper(res)
+  res.send('Hello World: part 1')
 })
+
+exports.api = functions
+  .runWith({memory: '1GB'})
+  .https.onRequest((request, response) => {
+    return app(request, response)
+  })
