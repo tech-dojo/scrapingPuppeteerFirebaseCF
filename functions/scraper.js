@@ -28,11 +28,8 @@ const DailyNews = function(res) {
                 .then(function(content) {
                   $('h2', content).each(function() {
                     let headline = $(this).text()
-                    let obj = {text: headline}
-
                     console.log(headline)
-
-                    reddit.headlines.push(obj)
+                    reddit.headlines.push(headline)
                   })
                   browser.close()
                   res.json(reddit)
