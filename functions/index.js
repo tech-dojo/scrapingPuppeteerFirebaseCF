@@ -11,9 +11,10 @@ const app = express()
 app.use(cors({origin: true}))
 
 app.get('/scrape', (req, res) => {
-  // scraper(res)
-  res.send('Hello World: part 1')
+
+  res.send('Web Scraping and Storing Data: Puppeteer, Firebase and MongoDB: Part 1')
 })
+
 
 exports.api = functions
   .runWith({memory: '1GB'})
