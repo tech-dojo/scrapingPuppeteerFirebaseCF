@@ -8,11 +8,11 @@ Login to firebase
 
 **$ firebase login**
 
-   1. To view list of available projects:  **firebase list** 
-      or, Create a new project in your firebase console
-   2. To select a project:  **firebase use <project_id>** 
+   1. To view list of available projects: **$ firebase list** 
+      or create a new project in your firebase console
+   2. To select a project: **$ firebase use <project_id>** 
    
-Puppeteer requires more than 250 MB memory allocation allowed by default in the firebase spark plan.
+Puppeteer requires more than **250 MB** memory allocation allowed by default in the firebase spark plan.
 
 To initialize Firebase Cloud Functions
 
