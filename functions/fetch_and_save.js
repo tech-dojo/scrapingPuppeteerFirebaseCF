@@ -4,14 +4,15 @@ const request = require('request');
 let url = 'https://us-central1-scrapingdemo-92341.cloudfunctions.net/api/scrape'
 let db_url = "mongodb://localhost:27017"
 var db
+
 mongo.MongoClient.connect(db_url,
-    { useNewUrlParser: true }, function (err, client) {
+    { useNewUrlParser: true }, (err, client) => {
         if (err) {
             console.log('Could not connect to MongoDB')
         } else {
             console.log('Connected to MongoDB')
-         db = client.db('scrapedData')
-            db.createCollection('test', function (err, collection) {
+            db = client.db('scrapedData')
+            db.createCollection('test', (err, collection) => {
                 if (err) {
                     console.log("Error: ", err)
                 }

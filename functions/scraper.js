@@ -5,7 +5,6 @@ const url = 'https://www.reddit.com/'
 
 const Scrape = (res) => {
 
-
   var reddit = {
     posts: []
   }
@@ -15,20 +14,20 @@ const Scrape = (res) => {
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox'],
     })
-    .then(function(browser) {
+    .then(function (browser) {
       browser
         .newPage()
-        .then(function(page) {
+        .then(function (page) {
           page
             .goto(url, {
               waitUntil: 'load',
               timeout: 300000,
             })
-            .then(function() {
+            .then(function () {
               page
                 .content()
-                .then(function(content) {
-                  $('h2', content).each(function() {
+                .then(function (content) {
+                  $('h2', content).each(function () {
                     let headline = $(this).text()
                     console.log(headline)
                     reddit.posts.push(headline)
@@ -36,22 +35,22 @@ const Scrape = (res) => {
                   browser.close()
                   res.json(reddit)
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                   console.log('reddit content error')
                   console.log(error)
                 })
             })
-            .catch(function(error) {
+            .catch(function (error) {
               console.log('reddit goto error')
               console.log(error)
             })
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.log('reddit newpage error')
           console.log(error)
         })
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.log(error)
     })
 }
