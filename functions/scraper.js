@@ -3,9 +3,11 @@ const $ = require('cheerio')
 
 const url = 'https://www.reddit.com/'
 
-const DailyNews = function(res) {
+const Scrape = (res) => {
+
+
   var reddit = {
-    headlines: [],
+    posts: []
   }
 
   return puppeteer
@@ -29,7 +31,7 @@ const DailyNews = function(res) {
                   $('h2', content).each(function() {
                     let headline = $(this).text()
                     console.log(headline)
-                    reddit.headlines.push(headline)
+                    reddit.posts.push(headline)
                   })
                   browser.close()
                   res.json(reddit)
@@ -50,9 +52,8 @@ const DailyNews = function(res) {
         })
     })
     .catch(function(error) {
-      console.log('inside reddit')
       console.log(error)
     })
 }
 
-module.exports = DailyNews
+module.exports = Scrape
