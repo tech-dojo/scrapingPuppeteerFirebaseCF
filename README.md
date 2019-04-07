@@ -1,25 +1,15 @@
-# scrapingPuppeteerFirebaseCF
+# Instructions
 
-After cloning the repository go to **scrapingPuppeteerFirebaseCF/functions** directory and run the following command to install all the dependencies
 
-```$ npm install```
-
-Login to firebase
-
-```$ firebase login```
-
-   1. To view list of available projects: 
-   
-   ```$ firebase list``` 
+   1. Clone the repository
       
-   or create a new project in your firebase console
-      
-   2. To select a project: 
+   2. Go to scrapingPuppeteerFirebaseCF/functions directory and run the following command to install all the dependencies
+   $ npm install
    
-   ```$ firebase use <project_id>``` 
+   3. On the background run your mongodb
    
-Puppeteer requires more than **250 MB** memory allocation allowed by default in the firebase spark plan.
-
-To initialize Firebase Cloud Functions
-
- ```$ firebase deploy```
+   4. Run the program with :  node fetch_and_save
+   
+   5. To see what is stored in mongoDB :
+      a. $ use scrapedData
+      b. $ db.test.find().pretty()
