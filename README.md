@@ -11,5 +11,7 @@
    4. Run the program with :  ```node fetch_and_save```
    
    5. To see what is stored in mongoDB :
+   
       a. ```$ use scrapedData```
+      
       b. ```$ db.test.find().pretty()```
