@@ -1,4 +1,7 @@
-# Instructions
+# Web scraping with Puppeteer on Firebase Cloud Functions
+* [Part 3](https://www.codebiddya.com/blog/view/5ca073aa4556090017e92dcc): Retrieve JSON objects from the url (provided by the firebase console) and store it in MongoDB.
+
+### Instructions
 
 
    1. Clone the repository
