@@ -1,5 +1,5 @@
 # scrapingPuppeteerFirebaseCF
-Refer to our Blogs at [CodeBiddya](www.codebiddya.com) for step by step tutorial- **Web Scraping and Storing Data: Puppeteer, Firebase and MongoDB**.
+Refer to our Blogs at [CodeBiddya](https://www.codebiddya.com/) for step by step tutorial- **Web Scraping and Storing Data: Puppeteer, Firebase and MongoDB**.
 * [Part 1](https://www.codebiddya.com/blog/view/5ca070934556090017e92dc8) outlines how to deploy cloud functions in Firebase. 
 * [Part 2](https://www.codebiddya.com/blog/view/5ca06cfa4556090017e92dc0) demonstrates how to extract data from HTML page, a technique commonly known as web scraping.
 * [Part 3](https://www.codebiddya.com/blog/view/5ca073aa4556090017e92dcc) shows how to retrieve JSON objects from the url (provided by the firebase console) and store it in your MongoDB.
