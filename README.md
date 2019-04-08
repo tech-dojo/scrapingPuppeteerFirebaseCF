@@ -1,4 +1,5 @@
-# scrapingPuppeteerFirebaseCF
+# Web scraping with Puppeteer on Firebase Cloud Functions
+* [Part 1](https://www.codebiddya.com/blog/view/5ca070934556090017e92dc8): Deploy cloud functions in Firebase. 
 
 After cloning the repository go to **scrapingPuppeteerFirebaseCF/functions** directory and run the following command to install all the dependencies
 
