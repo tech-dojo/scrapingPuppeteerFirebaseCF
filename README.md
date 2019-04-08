@@ -1,4 +1,5 @@
-# scrapingPuppeteerFirebaseCF
+# Web scraping with Puppeteer on Firebase Cloud Functions
+* [Part 2](https://www.codebiddya.com/blog/view/5ca06cfa4556090017e92dc0): Extract data from an HTML page using Puppeteer and Cheerio
 
 After cloning the repository go to **scrapingPuppeteerFirebaseCF/functions** directory and run the following command to install all the dependencies
 
